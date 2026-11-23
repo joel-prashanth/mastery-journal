@@ -1,0 +1,8 @@
+# Block log
+
+## M1 B2: Strings and f-strings (2026-11-23)
+- Outcome: practice/m1_b2_strings.py cleans a syllabus line and prints `1.2 | process scheduling (18 chars)`.
+- Quiz A 2/3, Quiz B 1/3, retake 1/2. Weak spot: string methods return new strings.
+- Gotcha logged: `s.upper()` without `=` does not change `s`.
+- Ship notes: Cost none. Scale none. Maintain none. Business none yet.
+- In my words, what I will remember:
