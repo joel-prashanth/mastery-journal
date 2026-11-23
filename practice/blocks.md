@@ -6,3 +6,11 @@
 - Gotcha logged: `s.upper()` without `=` does not change `s`.
 - Ship notes: Cost none. Scale none. Maintain none. Business none yet.
 - In my words, what I will remember:
+
+
+## M1 B3: Lists and dicts (2026-11-23)
+- Outcome: practice/m1_b3_collections.py stores topics in a list and marks in a dict and reads each mark back.
+- Quiz A 3/3, Quiz B 1/3, retake 2/2. Weak spot: in-place (lists, dicts) versus new value (strings).
+- Gotcha logged: storing the result of `append` gives `None`.
+- Ship notes: Cost none. Scale none. Maintain none. Business none yet.
+- In my words, what I will remember:
