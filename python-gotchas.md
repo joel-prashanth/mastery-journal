@@ -18,3 +18,9 @@ One entry per surprise: what I expected, what happened, the rule.
 - **Expected:** `"age: " + 28` would give `"age: 28"`, like JS.
 - **Happened:** Python raised a TypeError.
 - **Rule:** Python does not mix text and numbers with `+`. Use an f-string: `f"age: {28}"`.
+
+
+## 2026-11-26: an empty list or dict is falsy in Python
+- **Expected:** `if {}:` would run, because empty objects are truthy in JS.
+- **Happened:** `bool({})` is `False`, so the branch is skipped.
+- **Rule:** in Python, anything with nothing in it (`0`, `""`, `[]`, `{}`, `None`) is falsy. A non-empty string like `"0"` is truthy.

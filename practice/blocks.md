@@ -14,3 +14,11 @@
 - Gotcha logged: storing the result of `append` gives `None`.
 - Ship notes: Cost none. Scale none. Maintain none. Business none yet.
 - In my words, what I will remember:
+
+
+## M1 B4: Control flow and loops (2026-11-26)
+- Outcome: practice/m1_b4_loops.py loops over topics, looks up each mark and labels it weak, ok or strong.
+- Quiz A 3/3, Quiz B 2/3. Missed: falsy values (empty dict and empty string are falsy).
+- Gotcha logged: empty list or dict is falsy in Python, truthy in JS.
+- Ship notes: Cost none. Scale none. Maintain none. Business none yet.
+- In my words, what I will remember:
