@@ -44,3 +44,14 @@
   - Maintain: the file name and the "1.2 Title" line format are hard-coded, so a different syllabus layout breaks the chapter split.
   - Business: topics per chapter is the base for Sarvantha's study plan, because a student needs to see how much work each chapter holds.
 - In my words:
+
+## M2 B1: Tuples and unpacking
+- Quiz A 2/3, Quiz B 1/3, retake 3/3. First attempt 3/6.
+- Built: `parse_line` returns `(chapter, number, title)` and `syllabus-cli` unpacks it in one line.
+- Missed: one-item tuple needs a comma, printing a tuple vs printing two names, starred name is a list.
+- Ship notes:
+  - Cost: no cost per user, plain Python.
+  - Scale: parsing one line is O(1) and the whole file is O(n), fine at syllabus size.
+  - Maintain: `parse_line` assumes every line looks like "1.2 Title", so a differently formatted syllabus breaks it.
+  - Business: the (chapter, number, title) record is the base unit of Sarvantha's topic tree and study plan.
+- In my words:

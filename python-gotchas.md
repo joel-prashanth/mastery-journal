@@ -49,3 +49,23 @@ One entry per surprise: what I expected, what happened, the rule.
 - Expected: one total per chapter.
 - Happened: a running count printed on every pass.
 - Rule: finish counting in one loop, then print in a second loop at the same level.
+
+## join belongs to the separator (M2 B1)
+- Expected: `line.split().join(" ")` joins the words.
+- Happened: `AttributeError`, because a list has no `join`.
+- Rule: write `" ".join(line.split())`. The separator string owns `join`.
+
+## One-item tuple needs a comma (M2 B1)
+- Expected: `(5)` is a tuple.
+- Happened: it is the int 5. The comma makes the tuple.
+- Rule: `(5,)`.
+
+## No return means None, and None can't be unpacked (M2 B1)
+- Expected: `a, b, c = parse_line(...)` works once the function prints the values.
+- Happened: `TypeError: cannot unpack non-iterable NoneType`.
+- Rule: unpacking needs `return a, b, c`. Printing is not returning.
+
+## Starred names are lists (M2 B1)
+- Expected: `first, *rest = (1, 2, 3)` gives a tuple for `rest`.
+- Happened: `rest` is the list `[2, 3]`.
+- Rule: a starred name always collects into a list.
