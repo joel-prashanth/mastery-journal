@@ -34,3 +34,18 @@ One entry per surprise: what I expected, what happened, the rule.
 - Expected: `result = add_mark(scores)` gives back the edited list.
 - Happened: `scores` changed in place, but `result` was `None`.
 - Rule: an edit and a returned value are separate. Only `return` hands a value back.
+
+## Relative path in open() (M1 B6)
+- Expected: `open("../../syllabus.txt")` finds the file next to the Python file.
+- Happened: `FileNotFoundError`. Relative paths start from the folder where the command runs.
+- Rule: check which folder you ran from. `uv run` from the project root means `"syllabus.txt"`.
+
+## Passing the list instead of the item (M1 B6)
+- Expected: `clean_line(lines)` cleans every line.
+- Happened: `AttributeError: 'list' object has no attribute 'split'`.
+- Rule: inside `for line in lines:`, the function gets `line`, one string, never `lines`.
+
+## print inside the counting loop (M1 B6)
+- Expected: one total per chapter.
+- Happened: a running count printed on every pass.
+- Rule: finish counting in one loop, then print in a second loop at the same level.

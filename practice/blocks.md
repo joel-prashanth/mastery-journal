@@ -34,3 +34,13 @@
   - Maintain: the 5 and 8 cut-offs are hard-coded, so changing the rule means editing the function.
   - Business: weak/ok/strong labels will drive which GATE topics Sarvantha tells a student to revise first.
 - In my words: Don't call functions before defining them.
+
+## M1 B6: Files, main guard, counting
+- Quiz A 3/3, Quiz B 2/3 (missed the import and `__name__` question). Total 5/6.
+- Built: projects/syllabus-cli, a uv project that reads syllabus.txt, cleans each line and prints topics per chapter.
+- Ship notes:
+  - Cost: no cost per user, plain file reading.
+  - Scale: reading the whole file into memory is fine for a syllabus, but a huge file would need line-by-line reading.
+  - Maintain: the file name and the "1.2 Title" line format are hard-coded, so a different syllabus layout breaks the chapter split.
+  - Business: topics per chapter is the base for Sarvantha's study plan, because a student needs to see how much work each chapter holds.
+- In my words:
