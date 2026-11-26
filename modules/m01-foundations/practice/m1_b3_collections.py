@@ -14,3 +14,4 @@ print(marks["os"], marks.get("toc"), "cn" in marks)
 
 print(f"{topics[0]}: {marks[topics[0]]}")
 print(f"{topics[1]}: {marks[topics[1]]}")
+
