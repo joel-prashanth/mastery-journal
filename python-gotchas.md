@@ -12,3 +12,9 @@ One entry per surprise: what I expected, what happened, the rule.
 - **Expected:** `items = items.append("c")` would give me the list with "c" added.
 - **Happened:** `print(items)` showed `None`.
 - **Rule:** list methods like `append` edit the list itself and return nothing. Write `items.append("c")` on its own, with no `=`.
+
+
+## 2026-11-26: I tried to add a string and a number
+- **Expected:** `"age: " + 28` would give `"age: 28"`, like JS.
+- **Happened:** Python raised a TypeError.
+- **Rule:** Python does not mix text and numbers with `+`. Use an f-string: `f"age: {28}"`.
