@@ -5,7 +5,7 @@
 - Quiz A 2/3, Quiz B 1/3, retake 1/2. Weak spot: string methods return new strings.
 - Gotcha logged: `s.upper()` without `=` does not change `s`.
 - Ship notes: Cost none. Scale none. Maintain none. Business none yet.
-- In my words, what I will remember:
+- In my words, what I will remember: Changed strings will only persist if they are re-assigned while changing.
 
 
 ## M1 B3: Lists and dicts (2026-11-23)
@@ -13,7 +13,7 @@
 - Quiz A 3/3, Quiz B 1/3, retake 2/2. Weak spot: in-place (lists, dicts) versus new value (strings).
 - Gotcha logged: storing the result of `append` gives `None`.
 - Ship notes: Cost none. Scale none. Maintain none. Business none yet.
-- In my words, what I will remember:
+- In my words, what I will remember: 
 
 
 ## M1 B4: Control flow and loops (2026-11-26)
@@ -21,4 +21,16 @@
 - Quiz A 3/3, Quiz B 2/3. Missed: falsy values (empty dict and empty string are falsy).
 - Gotcha logged: empty list or dict is falsy in Python, truthy in JS.
 - Ship notes: Cost none. Scale none. Maintain none. Business none yet.
-- In my words, what I will remember:
+- In my words, what I will remember: Empty means false in Python. (Lists or Strings)
+
+
+## M1 B5: Functions
+- Quiz A 3/3, Quiz B 1/3, retake 1/2, then proof run (m1_b5_proof.py).
+- Built: `clean_line(raw)` and `label_mark(mark)` in practice/m1_b5_functions.py.
+- Missed: edit vs return (list changed in place, result is None), define before call.
+- Ship notes:
+  - Cost: no cost per user, plain Python.
+  - Scale: nothing breaks at 10x, these functions are tiny.
+  - Maintain: the 5 and 8 cut-offs are hard-coded, so changing the rule means editing the function.
+  - Business: weak/ok/strong labels will drive which GATE topics Sarvantha tells a student to revise first.
+- In my words: Don't call functions before defining them.

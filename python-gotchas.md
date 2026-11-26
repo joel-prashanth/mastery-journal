@@ -24,3 +24,13 @@ One entry per surprise: what I expected, what happened, the rule.
 - **Expected:** `if {}:` would run, because empty objects are truthy in JS.
 - **Happened:** `bool({})` is `False`, so the branch is skipped.
 - **Rule:** in Python, anything with nothing in it (`0`, `""`, `[]`, `{}`, `None`) is falsy. A non-empty string like `"0"` is truthy.
+
+## Calling a function above its def (M1 B5)
+- Expected: Python finds `double` anywhere in the file, like JS hoisting.
+- Happened: `NameError`, because `def` runs when Python reaches it.
+- Rule: define the function above the line that calls it.
+
+## Storing the result of a function with no return (M1 B5)
+- Expected: `result = add_mark(scores)` gives back the edited list.
+- Happened: `scores` changed in place, but `result` was `None`.
+- Rule: an edit and a returned value are separate. Only `return` hands a value back.
